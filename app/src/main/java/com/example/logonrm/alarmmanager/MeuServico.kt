@@ -12,7 +12,7 @@ import android.util.Log
 class MeuServico : Service() {
 
 
-    git init
+
     lateinit var mp: MediaPlayer
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -22,7 +22,7 @@ class MeuServico : Service() {
 
         mp = MediaPlayer.create(this, R.raw.alarm_kiko)
         mp.start()
-        return START_STICKY
+        return START_NOT_STICKY
     }
 
     override fun onBind(intent: Intent?): IBinder ?{
